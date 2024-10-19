@@ -1,0 +1,208 @@
+<html>
+<head>
+    <title>TrongNghia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="demo.js">
+    <style>
+          body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #add8e6; /* Light blue background */
+            overflow: hidden;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .envelope {
+            width: 50px;
+            height: 30px;
+            position: absolute;
+            top: -50px; /* Start above the viewport */
+            background-image: url('https://placehold.co/50x30'); /* Placeholder image */
+            background-size: cover;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            25% {
+                transform: translateY(25vh) rotate(15deg);
+            }
+            50% {
+                transform: translateY(50vh) rotate(-15deg);
+            }
+            75% {
+                transform: translateY(75vh) rotate(10deg);
+            }
+            100% {
+                transform: translateY(100vh) rotate(0deg); /* Fall to the bottom of the viewport */
+            }
+        }
+        .envelope:nth-child(1) {
+            left: 10%;
+            animation-duration: 5s;
+            animation-delay: 0s;
+        }
+        .envelope:nth-child(2) {
+            left: 30%;
+            animation-duration: 6s;
+            animation-delay: 1s;
+        }
+        .envelope:nth-child(3) {
+            left: 50%;
+            animation-duration: 7s;
+            animation-delay: 2s;
+        }
+        .envelope:nth-child(4) {
+            left: 70%;
+            animation-duration: 8s;
+            animation-delay: 3s;
+        }
+        .envelope:nth-child(5) {
+            left: 90%;
+            animation-duration: 9s;
+            animation-delay: 4s;
+        }
+        .envelope:nth-child(6) {
+            left: 20%;
+            animation-duration: 5.5s;
+            animation-delay: 5s;
+        }
+        .envelope:nth-child(7) {
+            left: 40%;
+            animation-duration: 6.5s;
+            animation-delay: 6s;
+        }
+        .envelope:nth-child(8) {
+            left: 60%;
+            animation-duration: 7.5s;
+            animation-delay: 7s;
+        }
+        .envelope:nth-child(9) {
+            left: 80%;
+            animation-duration: 8.5s;
+            animation-delay: 8s;
+        }
+        .envelope:nth-child(10) {
+            left: 15%;
+            animation-duration: 9.5s;
+            animation-delay: 9s;
+        }
+        .envelope:nth-child(11) {
+            left: 35%;
+            animation-duration: 5.2s;
+            animation-delay: 10s;
+        }
+        .envelope:nth-child(12) {
+            left: 55%;
+            animation-duration: 6.2s;
+            animation-delay: 11s;
+        }
+        .envelope:nth-child(13) {
+            left: 75%;
+            animation-duration: 7.2s;
+            animation-delay: 12s;
+        }
+        .envelope:nth-child(14) {
+            left: 95%;
+            animation-duration: 8.2s;
+            animation-delay: 13s;
+        }
+        .envelope:nth-child(15) {
+            left: 25%;
+            animation-duration: 9.2s;
+            animation-delay: 14s;
+        }
+        .envelope:nth-child(16) {
+            left: 45%;
+            animation-duration: 5.7s;
+            animation-delay: 15s;
+        }
+        .envelope:nth-child(17) {
+            left: 65%;
+            animation-duration: 6.7s;
+            animation-delay: 16s;
+        }
+        .envelope:nth-child(18) {
+            left: 85%;
+            animation-duration: 7.7s;
+            animation-delay: 17s;
+        }
+        .envelope:nth-child(19) {
+            left: 5%;
+            animation-duration: 8.7s;
+            animation-delay: 18s;
+        }
+        .envelope:nth-child(20) {
+            left: 50%;
+            animation-duration: 9.7s;
+            animation-delay: 19s;
+        }
+        .message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px;
+            border: 2px solid white;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* More prominent shadow */
+            background-color: #ff0000; /* Red background */
+            animation: float 3s ease-in-out infinite;
+            transition: transform 0.3s ease-in-out;
+            text-align: center;
+        }
+        .message:hover {
+            transform: translate(-50%, -50%) scale(1.1); /* Slightly enlarge on hover */
+        }
+        @keyframes float {
+            0% {
+                transform: translate(-50%, -50%) translateY(0);
+            }
+            50% {
+                transform: translate(-50%, -50%) translateY(-10px);
+            }
+            100% {
+                transform: translate(-50%, -50%) translateY(0);
+            }
+        }
+        canvas {
+        background-color:white;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="message">Yêu bé Hà !! <br>Click  vào loopy đi nàooo </div>
+    <a href="/demo.html" class="envelope"><img src="/image/thu.jpg" alt="" width="50px" height="40px"></a>
+    <a href="/demo.html" class="envelope"><img src="/image/thu.jpg" alt="" width="50px" height="40px"></a>
+    <a href="/demo.html" class="envelope"><img src="/image/thu.jpg" alt="" width="50px" height="40px"></a>
+    <a href="/demo.html" class="envelope"><img src="/image/thu.jpg" alt="" width="50px" height="40px"></a>
+    <a href="/demo.html" class="envelope"><img src="/image/thu.jpg" alt="" width="50px" height="40px"></a>
+    <a href="/demo.html" class="envelope"><img src="/image/thu.jpg" alt="" width="50px" height="40px"></a>
+    <a href="/demo.html" class="envelope"><img src="/image/thu.jpg" alt="" width="50px" height="40px"></a>
+    <a href="/demo.html" class="envelope"><img src="/image/thu.jpg" alt="" width="50px" height="40px"></a>
+    <a href="/demo.html" class="envelope"><img src="/image/thu.jpg" alt="" width="50px" height="40px"></a>
+    <a href="/demo.html" class="envelope"><img src="/image/thu.jpg" alt="" width="50px" height="40px"></a>
+    <a href="/demo.html" class="envelope"><img src="/image/thu.jpg" alt="" width="50px" height="40px"></a>
+    <a href="/demo.html" class="envelope"><img src="/image/thu.jpg" alt="" width="50px" height="40px"></a>
+    <a href="/demo.html" class="envelope"><img src="/image/thu.jpg" alt="" width="50px" height="40px"></a>
+    <a href="/demo.html" class="envelope"><img src="/image/thu.jpg" alt="" width="50px" height="40px"></a>
+    <a href="/demo.html" class="envelope"><img src="/image/thu.jpg" alt="" width="50px" height="40px"></a>
+    <a href="/demo.html" class="envelope"><img src="/image/thu.jpg" alt="" width="50px" height="40px"></a>
+    <a href="/demo.html" class="envelope"><img src="/image/thu.jpg" alt="" width="50px" height="40px"></a>
+    <a href="/demo.html" class="envelope"><img src="/image/thu.jpg" alt="" width="50px" height="40px"></a>
+    <a href="/demo.html" class="envelope"><img src="/image/thu.jpg" alt="" width="50px" height="40px"></a>
+    <a href="/demo.html" class="envelope"><img src="/image/thu.jpg" alt="" width="50px" height="40px"></a>
+    <canvas id="canvas"></canvas>
+    <script src="demo.js"></script>
+</body>
+
+
+</html>

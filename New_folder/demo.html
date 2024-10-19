@@ -1,0 +1,218 @@
+<html>
+ <head>
+  <title>ThuHa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&amp;display=swap" rel="stylesheet"/>
+  <style>
+  
+   body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #FFB6C1; /* Light pink background */
+            overflow: hidden; /* Hide overflow to prevent scrollbars */
+            position: relative; /* For positioning snowflakes and snowballs */
+        }
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+        .snowball {
+            position: absolute;
+            bottom: 0;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.9;
+            pointer-events: none;
+            animation: roll linear infinite;
+        }
+        @keyframes roll {
+            to {
+                transform: translateX(100vw);
+            }
+        }
+        .content {
+            background-color: #ADD8E6; /* Lighter blue background */
+            color: #FFFFFF;
+            padding: 20px;
+            border-radius: 20px; /* More rounded corners */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* More prominent shadow */
+            font-family: 'Roboto', sans-serif; /* Use Roboto font */
+            font-size: 16px;
+            width: 70vw; /* Wider width */
+            height: auto; /* Adjust height to fit content */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative; /* For positioning the audio button */
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .content-text {
+            font-family: 'Roboto', sans-serif; /* Use Roboto font */
+            font-size: 22px; /* Larger font size */
+            font-weight: bold; /* Bold text */
+            color: #FFFFFF; /* White color */
+            margin-bottom: 20px;
+            max-height: 50%; /* Ensure the text does not overflow */
+            overflow-y: auto; /* Add scroll if text overflows */
+            padding: 10px; /* Add padding for better readability */
+            text-align: left; /* Align text to the left */
+        }
+        .content-text .highlight {
+            font-size: 28px; /* Larger font size for the highlighted text */
+            display: block; /* Ensure it starts on a new line */
+        }
+        .content-text .signature {
+            display: block; /* Ensure it starts on a new line */
+            margin-top: 10px; /* Add some space above the signature */
+        }
+        .product-images {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: auto; /* Push the images to the bottom */
+            margin-bottom: 20px; /* Add margin to lower the images */
+        }
+        .product-images div {
+            width: 150px; /* Fixed width */
+            height: 200px; /* Fixed height */
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden; /* Ensure images fit within the div */
+            transition: transform 0.3s; /* Smooth zoom effect */
+        }
+        .product-images div:hover {
+            transform: scale(1.1); /* Zoom in on hover */
+        }
+        .product-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure images cover the div without distortion */
+        }
+  </style>
+ </head>
+ <body>
+  <div class="content">
+   <div class="content-text">
+    <span class="highlight">
+     Bé Hà iuu
+    </span>
+    <br/>
+    Nhân ngày Phụ nữ Việt Nam 20/10, anh muốn gửi tới em những lời chúc tốt đẹp nhất. Em là ánh sáng trong cuộc đời anh, là nguồn động viên, là tình yêu vô bờ bến. Cảm ơn em đã luôn ở bên anh, chia sẻ niềm vui, nỗi buồn và những khoảnh khắc đáng nhớ. Anh nguyện sẽ luôn bảo vệ, yêu thương và trân trọng em, không chỉ hôm nay mà cả những ngày sau. Chúc em luôn xinh đẹp, hạnh phúc và đạt được mọi ước mơ của mình. Mãi yêu em!
+    <br/>
+    <span class="signature">
+     Yêu em nhiều, Trong Nghia 🌹❤️
+    </span>
+   </div>
+   <div class="product-images">
+    <div>
+     <img alt="Product Image 1" height="200" src="/image/p1.jpg" width="150"/>
+    </div>
+    <div>
+     <img alt="Product Image 2" height="200" src="/image/z5946722373533_b7d507720444945b52f6b878b8906f4e.jpg" width="150"/>
+    </div>
+    <div>
+     <img alt="Product Image 3" height="200" src="/image/z5946722378791_3dd67dc1e3b20b86cca146fe12a7aa9e.jpg" width="150"/>
+    </div>
+    <div>
+     <img alt="Product Image 4" height="200" src="/image/z5946722380449_f24c35dba00da4be1c62c5b60216c128.jpg" width="150"/>
+    </div>
+    <div>
+     <img alt="Product Image 5" height="200" src="/image/z5946722399561_3d79f527a2b9bf732e25865f74b22963.jpg" width="150"/>
+    </div>
+   </div>
+  </div>
+  <audio autoplay="" id="audio" src="/y2mate.com-Hiya-EM-CÓ-NHỚ-ANH-KHÔNG-Official-Video_1080pHF.mp3">
+  </audio>
+  <script>
+   let currentIndex = 0;
+        const images = [
+            "/image/p1.jpg",
+            "/image/z5946722399561_3d79f527a2b9bf732e25865f74b22963.jpg",
+            "/image/z5946722380449_f24c35dba00da4be1c62c5b60216c128.jpg",
+            "/image/z5946722378791_3dd67dc1e3b20b86cca146fe12a7aa9e.jpg",
+            "/image/z5946722373533_b7d507720444945b52f6b878b8906f4e.jpg",
+            "/image/z5946722387243_c5e81b3db6e3b30cef9e5bbd5e02026d.jpg",
+            "/image/z5946722387481_5366d1f95c8b20745cefd387ddd627c3.jpg",
+            "/image/z5946722406951_d1112d64891e42c66a8809b638b8095c.jpg",
+            "/image/z5946722410881_b339f1487243324b05972f23df123a90.jpg"
+        ];
+
+        function showImages() {
+            const imageDivs = document.querySelectorAll('.product-images div');
+            imageDivs.forEach((div, index) => {
+                const img = div.querySelector('img');
+                img.src = images[(currentIndex + index) % images.length];
+            });
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImages();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showImages();
+            setInterval(nextImage, 3000); // Change image every 3 seconds
+        });
+
+        // Snowflake generation
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.style.left = `${Math.random() * 100}vw`;
+            snowflake.style.width = `${Math.random() * 10 + 5}px`;
+            snowflake.style.height = snowflake.style.width;
+            snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`; // Slower falling speed
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 10000); // Longer duration to match slower falling speed
+        }
+
+        setInterval(createSnowflake, 100);
+
+        // Snowball generation
+        function createSnowball() {
+            const snowball = document.createElement('div');
+            snowball.classList.add('snowball');
+            snowball.style.left = `${Math.random() * 100}vw`;
+            snowball.style.width = `${Math.random() * 30 + 20}px`;
+            snowball.style.height = snowball.style.width;
+            snowball.style.animationDuration = `${Math.random() * 10 + 10}s`; // Rolling speed
+            document.body.appendChild(snowball);
+
+            setTimeout(() => {
+                snowball.remove();
+            }, 20000); // Duration to match rolling speed
+        }
+
+        setInterval(createSnowball, 2000);
+  </script>
+ </body>
+</html>
